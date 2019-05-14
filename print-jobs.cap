@@ -2,11 +2,11 @@
 # sudo ./bettercap -caplet replace-images.cap -eval "set arp.spoof.targets 192.168.1.64"
 
 
-scalpel definitions:
-Start:  
+# scalpel definitions:
+# Start:  
 .%-12345X@PJL JOB
 
-Stop:
+# Stop:
 %%EOF
 ..%-12345X@PJL EOJ
 .%-12345X
